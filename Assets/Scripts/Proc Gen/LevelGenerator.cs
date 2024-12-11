@@ -37,7 +37,7 @@ public class LevelGenerator : MonoBehaviour
         MoveChunk();
     }
 
-    private float CalculatePositionZ()
+    float CalculatePositionZ()
     {
         float zPosition;
 

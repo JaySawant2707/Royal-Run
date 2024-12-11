@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
     }
 
-    private void MovePlayer()
+    void MovePlayer()
     {
         Vector3 currentPosition = rb.position;
         Vector3 moveDirection = new Vector3(movement.x, 0, movement.y);
