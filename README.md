@@ -1,2 +1,2 @@
 # Royal-Run
- It's a prcedural generation endless runner gaem
+ It's a prcedural generation endless runner game.
