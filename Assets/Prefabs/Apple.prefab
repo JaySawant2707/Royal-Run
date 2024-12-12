@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8134527730223947502}
   - component: {fileID: 457553747047649861}
-  - component: {fileID: 3459623568962575968}
+  - component: {fileID: 5564317987201512762}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -57,7 +57,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 1.3018799, z: 0}
---- !u!114 &3459623568962575968
+--- !u!114 &5564317987201512762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,9 +66,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4106853092816328829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b43e87f892e28943b6bba65a7b8468b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c625a803ce3abf47a18617248b9a9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 100
 --- !u!1 &8425204960166765141
 GameObject:
   m_ObjectHideFlags: 0

@@ -115,6 +115,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canon
       objectReference: {fileID: 0}
+    - target: {fileID: 7537074162635995935, guid: 5001a22382f65cf45a6e8aba0aab3983, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537074162635995935, guid: 5001a22382f65cf45a6e8aba0aab3983, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9209376964719992445, guid: 5001a22382f65cf45a6e8aba0aab3983, type: 3}
       propertyPath: m_Size.x
       value: 1.3179638
