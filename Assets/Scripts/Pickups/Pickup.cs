@@ -15,10 +15,10 @@ public abstract class Pickup : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            OnPickup();
+            OnPickup(other.gameObject.GetComponent<PlayerCollision>());
             Destroy(gameObject);
         }
     }
 
-    protected abstract void OnPickup();
+    protected abstract void OnPickup(PlayerCollision playerCollision);
 }

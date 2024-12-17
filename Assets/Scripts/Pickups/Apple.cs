@@ -11,8 +11,9 @@ public class Apple : Pickup
         this.levelGenerator = levelGenerator;
     }
 
-    protected override void OnPickup()
+    protected override void OnPickup(PlayerCollision playerCollision)
     {
         levelGenerator.ChangeChunkMoveSpeed(changeMoveSpeedAmount);
+        playerCollision.PlayAppleSound();
     }
 }

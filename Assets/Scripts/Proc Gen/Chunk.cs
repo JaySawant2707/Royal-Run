@@ -8,6 +8,7 @@ public class Chunk : MonoBehaviour
     [SerializeField] GameObject applePrefab;
     [SerializeField] GameObject coinPrefab;
     [Header("Chunk Settings")]
+    [SerializeField] float fenceSpawnChance = 0.6f;
     [SerializeField] float appleSpawnChance = 0.3f;
     [SerializeField] float coinSpawnChance = 0.5f;
     [SerializeField] int maxCoinsToSpawn = 4;
@@ -33,10 +34,12 @@ public class Chunk : MonoBehaviour
         SpawnApple();
         SpawnCoins();
     }
-
+    
     void SpawnFences()
     {
-        int fencesToSpawn = Random.Range(0, avaliableLanes.Count); //no of fences to spawn
+        if (Random.value > fenceSpawnChance) return;
+
+        int fencesToSpawn = Random.Range(0, avaliableLanes.Count); //number of fences to spawn
 
         for (int i = 0; i < fencesToSpawn; i++)
         {
@@ -77,7 +80,7 @@ public class Chunk : MonoBehaviour
             float spawnPositionZ = endOfChunkZ - (i * coinSeperationDistance);
             Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, spawnPositionZ);
             Coin newCoin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Coin>();
-            
+
             newCoin.Init(scoreManager);//Injecting dependency to Coin class
         }
     }

@@ -67,8 +67,10 @@ public class LevelGenerator : MonoBehaviour
 
         Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, zPosition);
         GameObject chunkToSpawn = SelectChunkToSpawn();
+        
         GameObject newChunkGO = Instantiate(chunkToSpawn, spawnPosition, Quaternion.identity, chunkParent);
         chunks.Add(newChunkGO);
+
         Chunk newChunk = newChunkGO.GetComponent<Chunk>();
         newChunk.Init(this, scoreManager);//Injecting dependency to Chunk class
         chunksSpawned++;

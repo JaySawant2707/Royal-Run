@@ -10,8 +10,9 @@ public class Coin : Pickup
         this.scoreManager = scoreManager;
     }
     
-    protected override void OnPickup()
+    protected override void OnPickup(PlayerCollision playerCollision)
     {
         scoreManager.UpdateScore(scorePoints);
+        playerCollision.PlayCoinSound();
     }
 }

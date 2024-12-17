@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointTimeExtension: 8
+  obstacleDelayTimeAmount: 0.2
 --- !u!1 &4700683446855604485
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +8
+  m_text: +8s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -704,6 +705,14 @@ PrefabInstance:
     - target: {fileID: 2615501535592881440, guid: 0fa2522347319d546976bee2c78709b1, type: 3}
       propertyPath: m_Name
       value: Checkpoint Chunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471292438029692604, guid: 0fa2522347319d546976bee2c78709b1, type: 3}
+      propertyPath: coinSpawnChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471292438029692604, guid: 0fa2522347319d546976bee2c78709b1, type: 3}
+      propertyPath: appleSpawnChance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7563981231614299905, guid: 0fa2522347319d546976bee2c78709b1, type: 3}
       propertyPath: m_LocalPosition.x

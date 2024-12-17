@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         DecreaseTime();
+        if (Input.GetKey(KeyCode.Escape)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void IncreaseTimeLeft(float amount)
@@ -33,7 +35,7 @@ public class GameManager : MonoBehaviour
         if (gameOver == true) return;
 
         timeLeft -= Time.deltaTime;
-        timeText.text = timeLeft.ToString("F1");
+        timeText.text = timeLeft.ToString("F1") + "sec";
 
         if (timeLeft < 0)
         {
@@ -47,5 +49,17 @@ public class GameManager : MonoBehaviour
         playerController.enabled = false;
         gameOverText.SetActive(true);
         Time.timeScale = 0.1f;
+    }
+
+    public void ReloadLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void BackBtn()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

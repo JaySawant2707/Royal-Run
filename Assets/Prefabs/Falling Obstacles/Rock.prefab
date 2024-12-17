@@ -156,7 +156,7 @@ MonoBehaviour:
   collisionParticles: {fileID: 237812248347125579}
   boulderAudioSource: {fileID: 5623610677348242065}
   shakeModifier: 1
-  cooldownTime: 1
+  cooldownTime: 0.7
 --- !u!82 &5623610677348242065
 AudioSource:
   m_ObjectHideFlags: 0

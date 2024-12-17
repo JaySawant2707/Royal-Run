@@ -5,10 +5,10 @@ public class Rock : MonoBehaviour
 {
     [SerializeField] ParticleSystem collisionParticles;
     [SerializeField] AudioSource boulderAudioSource;
-    [SerializeField] float shakeModifier = 1;
-    [SerializeField] float cooldownTime = 1;
+    [SerializeField] float shakeModifier = 1f;
+    [SerializeField] float collisionCooldown = 1f;
 
-    float cooldownTimer;
+    float collisionTimer = 1f;
     CinemachineImpulseSource cinemachineImpulseSource;
 
     void Awake()
@@ -18,16 +18,16 @@ public class Rock : MonoBehaviour
 
     void Update()
     {
-        cooldownTimer += Time.deltaTime;
+        collisionTimer += Time.deltaTime;
     }
 
     void OnCollisionEnter(Collision other)
     {
-        if (cooldownTimer < cooldownTime) return;
+        if (collisionTimer < collisionCooldown) return;
 
         ScreenShake();
         CollisionFX(other);
-        cooldownTimer = 0;
+        collisionTimer = 0;
     }
 
     private void ScreenShake()
